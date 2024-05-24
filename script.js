@@ -1,3 +1,0 @@
-functin Highlight() {
-    jai h
-}
