@@ -5,12 +5,24 @@ const notification = document.getElementById("notification");
 
 function checkWinner() {
   notification.textContent = "Game Over";
+
   if (humanScore > computerScore) {
-    notification.textContent = "Congratulations! you win :)";
+    setTimeout(() => {
+      notification.textContent =
+        "Congratulations! you win :)  " +
+        `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
   } else if (humanScore < computerScore) {
-    notification.textContent = "You Lose :(";
+    setTimeout(() => {
+      notification.textContent =
+        "You Lose :(  " + `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
   } else {
-    notification.textContent = "no one wins! Game is Draw";
+    setTimeout(() => {
+      notification.textContent =
+        "no one wins! Game is Draw" +
+        `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
   }
 }
 
@@ -61,33 +73,49 @@ function playRound(humanChoice, computerChoice) {
   humanChoice.toLowerCase();
   if (humanChoice == computerChoice) {
     notification.textContent = "draw ";
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
   } else if (humanChoice == "scissors" && computerChoice == "rock") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "You Lose!";
     computerScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else if (humanChoice == "scissors" && computerChoice == "paper") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "you Won!";
     humanScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else if (humanChoice == "rock" && computerChoice == "paper") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "you lose!";
     computerScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else if (humanChoice == "rock" && computerChoice == "scissors") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "You won!";
     humanScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else if (humanChoice == "paper" && computerChoice == "scissors") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "you lose!";
     computerScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else if (humanChoice == "paper" && computerChoice == "rock") {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "you won!";
     humanScore++;
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   } else {
+    setTimeout(() => {
+      notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
+    }, 500);
     notification.textContent = "Enter correct choice";
-    notification.textContent = `You : ${humanScore} and computer : ${computerScore}`;
   }
 }
